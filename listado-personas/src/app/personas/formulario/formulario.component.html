@@ -1,0 +1,28 @@
+<!-- <form class="form-row">
+  <div class="form-group col-md-2">
+    <label for="nombre" class="sr-only">Nombre</label>
+    <input type="text" name="nombre" id="nombre" class="form-control" placeholder="nombre"
+    #nombreInput>
+  </div>
+  <div class="form-group col-md-2">
+    <label for="apellido" class="sr-only">Apellido</label>
+    <input type="text" name="apellido" id="apellido" class="form-control" placeholder="apellido"
+    #apellidoInput>
+  </div>
+  <div class="col">
+    <button type="submit"
+    class="btn btb-primary"
+    (click)="onAgregarPersona()">
+      Agregar
+    </button>
+  </div>
+</form> -->
+<form class="item">
+  <input type="text" name="nombre" id="nombre" placeholder="nombre"
+  [(ngModel)]="nombreInput">
+
+  <input type="text" name="apellido" id="apellido" class="form-control" placeholder="apellido"
+  [(ngModel)]="apellidoInput">
+
+  <button type="submit"(click)="onAgregarPersona()">+</button>
+</form>

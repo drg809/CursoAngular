@@ -1,0 +1,26 @@
+
+<app-header
+
+    [ingresoTotal]="getIngresoTotal()"
+    [retiradoTotal]="getRetiradoTotal()"
+    [presupuestoTotal]="getPresupuestoTotal()"
+    [porcentajeTotal]="getPorcentajeTotal()"
+></app-header>
+
+
+
+
+<app-formulario></app-formulario>
+
+
+  
+<div class="contenedor limpiarEstilos">
+
+    <app-ingresos></app-ingresos>
+      
+   
+    <app-retirados
+    [ingresoTotal]="getIngresoTotal()"
+    ></app-retirados>
+
+</div>

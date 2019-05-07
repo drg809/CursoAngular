@@ -1,0 +1,16 @@
+<div class="egreso">
+  <h2 class="egreso_titulo">Retirados</h2>  
+              
+  <div class="elemento limpiarEstilos" *ngFor="let retirado of retirados">
+      <div class="elemento_descripcion">{{ retirado.description }}</div>
+      <div class="right limpiarEstilos">
+          <div class="elemento_valor">- {{ retirado.valor  | currency:'EUR':'€':'1.2-2'  }}</div>
+          <div class="elemento_porcentaje">{{ calcularPorcentaje(retirado) | percent }}</div>
+          <div class="elemento_eliminar">
+              <button class="elemento_eliminar--btn">
+                  <i class="ion-ios-close-outline"  (click)="eliminarRegistro(retirado)"></i>
+              </button>
+          </div>
+      </div>
+  </div>
+</div>
