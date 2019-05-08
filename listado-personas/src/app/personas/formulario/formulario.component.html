@@ -17,12 +17,14 @@
     </button>
   </div>
 </form> -->
-<form class="item">
-  <input type="text" name="nombre" id="nombre" placeholder="nombre"
-  [(ngModel)]="nombreInput">
+<div class="box">
+  <form class="item" #f="ngForm" (ngSubmit)="f.form.valid && onAgregarPersona()">
+    <input type="text" name="nombre" id="nombre" placeholder="nombre"
+    [(ngModel)]="nombreInput" required>
 
-  <input type="text" name="apellido" id="apellido" class="form-control" placeholder="apellido"
-  [(ngModel)]="apellidoInput">
+    <input type="text" name="apellido" id="apellido" class="form-control" placeholder="apellido"
+    [(ngModel)]="apellidoInput" required>
 
-  <button type="submit"(click)="onAgregarPersona()">+</button>
-</form>
+    <button type="submit"(click)="onAgregarPersona()" style="cursor: pointer">+</button>
+  </form>
+</div>
