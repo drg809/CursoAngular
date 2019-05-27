@@ -1,11 +1,11 @@
-<!-- <div class="row">
-  <div class="col-xs-12">
-    <div>
-      {{indice+1}}: {{persona.nombre}} {{persona.apellido}} 
-    </div>
-  </div>
-</div> -->
 <div class="item">
-  <input type="checkbox" (click)="emitirSaludo()">
-  <p>{{indice+1}}: {{persona.nombre}} {{persona.apellido}}</p>
+  <ul>
+    <li>
+      <a [routerLink]="['/personas',indice]"
+        [queryParams]="{modoEdicion:'1'}"
+      >
+        {{persona.nombre}} {{persona.apellido}}
+      </a>
+    </li>
+  </ul>
 </div>

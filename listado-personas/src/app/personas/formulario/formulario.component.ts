@@ -30,4 +30,6 @@ export class FormularioComponent implements OnInit {
     this.personasService.onPersonaAgregada(persona1);
     this.router.navigate(['personas']);
   }
+
+  eliminarPersona(){}
 }

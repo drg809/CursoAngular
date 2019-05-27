@@ -87,4 +87,6 @@ html {
     color: grey;
     opacity: 1;
   }
-  
+  .centrado{
+    text-align: center;
+  }

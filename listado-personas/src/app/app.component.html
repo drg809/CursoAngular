@@ -11,6 +11,12 @@
   [indice]="i"
   ></app-persona>
 </div> -->
+<div class="box centrado">
+  <a *ngIf="!isAuth()" class="cursor:pointer" routerLink="/login">Login</a>
+</div>
+<div class="box centrado">
+  <a *ngIf="isAuth()" class="cursor:pointer" (click)="salir()">Salir</a>
+</div>
 <div class="box" id="heading">
   <h1>{{titulo}}</h1>
 </div>

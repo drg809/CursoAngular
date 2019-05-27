@@ -9,20 +9,29 @@ import { FormularioComponent } from './personas/formulario/formulario.component'
 import { LoggingService } from './LoggingService.service';
 import { PersonasService } from './persona.service';
 import { PersonasComponent } from './personas/personas.component';
+import { ErrorComponent } from './error/error.component';
+import { DataServices } from './data.services';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { LoginService } from './login/login.service';
+import { LoginGuardian } from './login/login-guardian.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonaComponent,
     FormularioComponent,
-    PersonasComponent
+    PersonasComponent,
+    ErrorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [LoggingService,PersonasService],
+  providers: [LoggingService,PersonasService, DataServices,LoginService,LoginGuardian],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
